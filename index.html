@@ -4,23 +4,27 @@
 
 <script>
 var video = document.getElementById('video');
+video.removeAttribute('controls');
 video.addEventListener('click',function(){
     video.play();
 },false);
+
+
 </script>
 <style>
 
-video::-webkit-media-controls-start-playback-button {
-  display: none;
-}
 html, body, video {
 margin:0px;
 padding: 0px;
 }
+
+video::-webkit-media-controls {
+  display: none;
+}
 </style>
 <body>
 
-<video width="400" height="480">
+<video width="400" id='video' controls poster="Saturn-icon.png" onplaying="this.controls=false">
   <source src="movie.mp4" type="video/mp4">
 </video>
 
