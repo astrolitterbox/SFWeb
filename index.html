@@ -4,11 +4,15 @@
 
 <script>
 var video = document.getElementById('video');
-video.addEventListener('touchstart',function(){
+video.addEventListener('click',function(){
     video.play();
 },false);
 </script>
 <style>
+
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
 html, body, video {
 margin:0px;
 padding: 0px;
@@ -16,9 +20,8 @@ padding: 0px;
 </style>
 <body>
 
-<video width="800" height="960">
+<video width="400" height="480">
   <source src="movie.mp4" type="video/mp4">
- 
 </video>
 
 </body>
