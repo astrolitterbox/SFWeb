@@ -3,6 +3,10 @@
 <html>
 
 <script>
+
+if(navigator.userAgent.match(/Android/i)){
+    window.scrollTo(0,1);
+}
 var video = document.getElementById('video');
 video.removeAttribute('controls');
 video.addEventListener('click',function(){
